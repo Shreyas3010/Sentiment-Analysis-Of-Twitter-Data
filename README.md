@@ -1,4 +1,3 @@
-# GroupI
 ## CS404 - Undergraduate Research Project
 
 ## Team:
@@ -6,17 +5,6 @@
 - Yash Patel
 - Jaykumar Tandel
 - Shreyas Patel
-
-## Introduction
-
-# GroupI
-## COMP 6321 - Machine Learning
-
-## Team:
-- Apekshaba Gohil
-- Shreyas Patel
-- Sebastian Racedo
-- Misbah Shareef
 
 ## Introduction
 
@@ -34,7 +22,12 @@ In the second phase, custom-trained (on Dataset 1) and ImageNet pre-trained CNN 
 * [Pytorch](https://pytorch.org/docs/stable/torch.html), library for Deep neural network models and Tenssor computation with strong GPU acceleration;
 * [Sklearn](https://scikit-learn.org/stable/), library with different ML models.
 
-## Instructions to train/validate the model
-In the folder "Task-1" the jupyter notebook "Scratch_model.ipynb" can be found. Please change the dataset path to where the dataset is. All the cells can be run at once to train and validate the model. All the plots will be generated and displayed. 
+## Instructions to run programs
 
-Note: The code is made so it can run with GPU.
+### 1)	Setting up Environment
+* Download and install the Anaconda environment for python 3.7+ from this link… https://www.anaconda.com/.
+* To create and work with “.ipynb” files you will need Jupyter Notebook which can be opened once the Anaconda Package is installed.
+* Download Neo4j Database from this link… https://neo4j.com/download/.
+* Create a blank graph in Neo4j with password “123” and other things default. These settings are preferred because it will be used in many places in codes.
+* You need to create an account in https://developer.twitter.com/en and generate an API key which will be used later for data acquisition.
+
