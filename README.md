@@ -19,11 +19,15 @@ In summary, the integration of sentiment analysis, topic categorization, and sto
 ## Requirements 
 * [Python](http://www.python.org) version 3.8 or greater;
 * [Numpy](http://www.numpy.org), the core numerical extensions for linear algebra and multidimensional arrays;
-* [Matplotlib](http://matplotlib.sf.net), excellent plotting and graphing libraries;
+* [Ploty](https://plotly.com/python/), excellent plotting and graphing libraries;
 * [Pandas](http://pandas.pydata.org/), library to read files has a dataframe;
-* [Pytorch](https://pytorch.org/docs/stable/torch.html), library for Deep neural network models and Tenssor computation with strong GPU acceleration;
+* [Tensorflow](https://www.tensorflow.org/), library for Deep neural network models and Tensor computation with strong GPU acceleration;
 * [Sklearn](https://scikit-learn.org/stable/), library with different ML models.
-
+* [Flask](https://flask.palletsprojects.com/en/3.0.x/), library for creating web applications in Python.
+* [Py2neo](https://neo4j-contrib.github.io/py2neo/), library for working with Neo4j from within Python applications.
+* [NLTK](https://www.nltk.org/), library for building Python programs to work with human language data.
+* [Tweepy](https://www.tweepy.org/), library for accessing Twitter API.
+  
 ## Instructions to run programs
 
 ### 1)	Setting up Environment
