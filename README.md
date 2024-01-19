@@ -37,3 +37,18 @@ In summary, the integration of sentiment analysis, topic categorization, and sto
 * Create a blank graph in Neo4j with password “123” and other things default. These settings are preferred because it will be used in many places in codes.
 * You need to create an account in https://developer.twitter.com/en and generate an API key which will be used later for data acquisition.
 
+### 2)	Downloading Trainind Data
+* Download the training data of sentiment analysis for the link given below: http://help.sentiment140.com/for-students/.
+* Save this file in the folder “…/trainingandtestdata/”.
+* Training data for categorical classification is already given in the folder “…/Categorical Classification/Data/categorical_train_data.csv”.
+
+### 3)	Downloading glove vector file
+* Download the glove file from link given below: https://nlp.stanford.edu/projects/glove/.
+* There are many option but we advise you to download the Twitter embedding for GloVe with 27B tokens and 100 dimensions. Here is the direct download link: http://nlp.stanford.edu/data/glove.twitter.27B.zip.
+* Save this file in the folder “…/Sentiment Analysis/Data/glove”.
+* This file will be used for both sentiment analysis and categorical classification.
+
+### 4)	Preprocessing the training data
+* Run the “Preprocessing Notebook” to pre-process all the training data.
+* You need to run it twice. Once to preprocess data for “Sentiment Analysis” and another time to preprocess data for “Categorical Classification”.
+* You need to save their respective preprocessed data in their respective “Data” folders (Optional).
