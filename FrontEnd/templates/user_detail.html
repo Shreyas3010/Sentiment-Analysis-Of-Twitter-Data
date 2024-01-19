@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ user_val }} Details</title>
+</head>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+<body>
+<center>
+
+	<h1>Analysis-Meter</h1>
+	<form action="http://localhost:5000">
+		<input type="submit" name="submit" value="Home">
+	</form>
+	<div style="font-size: 130%;">
+		Username : <b>{{user_val}}</b> <br><br>
+
+		The {{user_val}}'s Cumulative sentiment till now is <b>"{{days}}"</b>.
+		<br>
+		{% if to_check == 1 %}
+		<form action="http://localhost:5000/user_details_days" method="GET">
+			To see the tweet behaviour for last 14 days : <input type="submit" name="submit" value="Click Here">
+		</form>
+		{% else %}
+		<form action="http://localhost:5000/user_details" method="GET">
+			To see the overall tweet behaviour : <input type="submit" name="submit" value="Click Here">
+		</form>
+		{% endif %}
+	</div>
+	<div style="height: 500px; width: 100%;" id="bargraph">
+		<script>
+        	var graphs = {{plot | safe}};
+        	Plotly.plot('bargraph',graphs,{});
+    </script>	
+	</div>
+</center>
+</body>
+</html>

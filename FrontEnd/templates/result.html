@@ -1,0 +1,80 @@
+<!doctype html>
+<style type="text/css">
+   th,td{
+      padding-top: 10px;
+      border-radius: 12px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      width: 200px;
+   }
+   table{
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      color: black;
+      font-size: 100%;
+   }
+   .button {
+  background-color: black; /* Green */
+  color: white;
+  border-color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.button:hover{
+   background-color: white;
+   color: black;
+
+}
+</style> 
+<html> 
+   <body> 
+     <center><h1 style="font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;">Analysis-Meter</h1>
+      <x>
+         <form action="http://localhost:5000/community">
+            <h2>To see Community Wise :<input type="submit" name="submit" value="Click Here"></h2>
+         </form>
+      </x>
+      <h2>To See Userwise Click Below</h2>
+      <table> 
+         {% for key, value in result.items() %} 
+            <tr style="border: 1px solid #ddd; border-radius: 12px;">
+            {% if value >= 0.9 %} 
+            <th style="background-color: rgb(0,255,0);">
+            {% elif value >= 0.8 %}
+            <th style="background-color: rgb(64,255,0);">
+            {% elif value >= 0.7 %}
+            <th style="background-color: rgb(128,255,0);">
+            {% elif value >= 0.6 %}
+            <th style="background-color: rgb(191,255,0);">
+            {% elif value >= 0.5 %}
+            <th style="background-color: rgb(255,255,0);">
+            {% elif value >= 0.4 %}
+            <th style="background-color: rgb(255,255,0);">
+            {% elif value >= 0.3 %}
+            <th style="background-color: rgb(255,191,0);">
+            {% elif value >= 0.2 %}
+            <th style="background-color: rgb(255,128,0);">
+            {% elif value >= 0.1 %}
+            <th style="background-color: rgb(255,64,0);">
+            {% else %}
+            <th style="background-color: rgb(255,0,0);">
+            {% endif %}
+                {{ key }} </th> 
+               <td style="align-content: center;">
+                  <form action="http://localhost:5000/user_details" method="POST">
+                     <input type="hidden" name="username" value="{{ key }}">
+                     <input type="hidden" name="last_days" value="{{ value }}">
+                     <input class="button" type="submit" name="submit" value="Details">
+                  </form>
+               </td>
+            </tr>   
+         {% endfor %} 
+      </table> 
+        </center>
+   </body> 
+</html> 

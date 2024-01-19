@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Community</title>
+</head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+<body>
+<center>
+<h1>Community Wise Cumulative sentiments</h1>
+<form action="http://localhost:5000">
+		<input type="submit" name="submit" value="Home">
+	</form>
+<div>
+	<br>
+	{% if to_do_check == 1 %}
+		<form action="http://localhost:5000/community_by_days" method="GET">
+			To see the tweet behaviour for last 14 days : <input type="submit" name="submit" value="Click Here">
+		</form>
+		{% else %}
+		<form action="http://localhost:5000/community" method="GET">
+			To see the overall tweet behaviour : <input type="submit" name="submit" value="Click Here">
+		</form>
+		{% endif %}
+</div>
+<div style="height: 500px; width: 100%;" id="bargraph">
+		<script>
+        	var graphs = {{plot | safe}};
+        	Plotly.plot('bargraph',graphs,{});
+    </script>	
+	</div>
+</center>
+</body>
+</html>
