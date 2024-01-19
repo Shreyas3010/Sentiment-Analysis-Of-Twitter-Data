@@ -8,11 +8,13 @@
 
 ## Introduction
 
-This report presents a comprehensive exploration of Convolutional Neural Networks (CNNs) in image classification, addressing real-world application challenges in the field.
+This report outlines a comprehensive approach to leveraging Twitter API data for effective analysis of individuals' emotional and mental well-being through sentiment analysis and topic categorization. The acquired Twitter data is stored in a Neo4j graph database to facilitate efficient graph traversal and retrieval.
 
-In the project's first phase, we trained a ResNet-18 CNN on the Colorectal Cancer dataset (Dataset 1). Training the Pretrained ResNet-18 model achieved the highest accuracy at 98.39\%, and t-SNE reduced CNN encoder output dimensions, visually enhancing class feature distinctiveness and model performance understanding.
- 
-In the second phase, custom-trained (on Dataset 1) and ImageNet pre-trained CNN encoders were used for feature extraction on Prostate Cancer dataset (Dataset 2) and Animal Faces dataset (Dataset 3). t-SNE reduced dimensionality for visual clarity. Using the pretrained CNN encoder, we applied Random Forest (RF) and K-Nearest Neighbors (KNN), and evaluted the accuracy of these ML models on the feature maps.
+In the initial phase of the project, the code involves utilizing the Twitter API to gather tweets. Subsequently, the data is stored in a Neo4j graph database. The sentiment analysis is applied to calculate sentiment values for each tweet, providing insights into the emotional status of the individuals involved.
+
+Moving on to the second phase, tweets are categorized into various topics such as Education, Business, Politics, Entertainment, and Sports. This categorization enables a detailed analysis of the mental health aspects related to different aspects of life. The Neo4j graph database proves to be instrumental in facilitating fast graph traversal and retrieval of relevant information for further analysis.
+
+In summary, the integration of sentiment analysis, topic categorization, and storage in a Neo4j graph database allows for a comprehensive understanding of individuals' emotional states and mental well-being based on their Twitter activity.
 
 ## Requirements 
 * [Python](http://www.python.org) version 3.8 or greater;
