@@ -72,5 +72,4 @@ In summary, the integration of sentiment analysis, topic categorization, and sto
 * Run the "eg.py" file with the help of command "python eg.py" or simply double click on the file.
 * It will show the localhost IP and Port Number on which the Flask-App is running. Just navigate to that URL in the Web-browser and you will be able to see the home-page of the application.
 
-
-
+Note: Internet connection is required to load the graph. You can use frontend only after you have stored the classified categories and sentiment values of tweets in Neo4j.
