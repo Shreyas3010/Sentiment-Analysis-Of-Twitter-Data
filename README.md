@@ -52,3 +52,25 @@ In summary, the integration of sentiment analysis, topic categorization, and sto
 * Run the “Preprocessing Notebook” to pre-process all the training data.
 * You need to run it twice. Once to preprocess data for “Sentiment Analysis” and another time to preprocess data for “Categorical Classification”.
 * You need to save their respective preprocessed data in their respective “Data” folders (Optional).
+
+### 5)	Machine Learning
+* After giving specific paths for training dataset and the saving models, you can follow further instructions given in the 2 notebooks “Sentiment Analysis.ipynb” and “Categorical Classification.ipynb” to complete the training part.
+
+### 6)	Gathering Twitter Data
+* First Open the Neo4j Desktop app and start the graph DB.
+* The file named “Twitter handles” contains all the usernames whose data will be collected. You can add or remove names in required.
+* Now open “Twitter API.ipynb” notebook in Jupyter.
+* Put the access tokens that you generated on the twitter developer site and change path for twitter handles file as required.
+* Run the code. This will gather all the data in Neo4j DB.
+* Now you can classify this data with the models you have trained and add the predicted labels to the DB.
+
+### 7)	Using FrontEnd
+* To start the Web-App for Analysis of the tweets, you need to have database running in Neo4j database.
+* First enter the password of your Neo4j Database at the line 34 and 124 in "eg.py" and line 6 in "data_acquisition.py".
+* Run the "data_acquisition.py" file with the help of command "python data_acquisition.py". It will find the cumulative sentiment of each user and store it in dictionary.txt file in the dictionary format (key:value pair).
+* Install the necessary module (if required) with the help of "pip install X" command.
+* Run the "eg.py" file with the help of command "python eg.py" or simply double click on the file.
+* It will show the localhost IP and Port Number on which the Flask-App is running. Just navigate to that URL in the Web-browser and you will be able to see the home-page of the application.
+
+
+
